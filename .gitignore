@@ -1,3 +1,7 @@
 steps.txt
 snowflake_tf_snow_key.p8
 snowflake_tf_snow_key.pub
+*.terraform*
+*.tfstate
+*.tfstate.*
+

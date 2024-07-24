@@ -13,3 +13,15 @@ $ git push -u origin main
 cd ~/.ssh
 $ openssl genrsa 2048 | openssl pkcs8 -topk8 -inform PEM -out snowflake_tf_snow_key.p8 -nocrypt
 $ openssl rsa -in snowflake_tf_snow_key.p8 -pubout -out snowflake_tf_snow_key.pub
+
+// Set env variables (bash)
+$export SNOWFLAKE_USER="tf-snow";
+$export SNOWFLAKE_AUTHENTICATOR=JWT;
+$export SNOWFLAKE_PRIVATE_KEY=`cat ~ /C:/Users/Elait112.ELAIT-DT-CHE-W-/Permifrost/snowflake_tf_snow_key.p8`;
+$export SNOWFLAKE_ACCOUNT="stb55081";
+
+// Set in system(powershell)
+[System.Environment]::SetEnvironmentVariable('SNOWFLAKE_USER','tf-snow')
+[System.Environment]::SetEnvironmentVariable('SNOWFLAKE_AUTHENTICATOR','JWT')
+[System.Environment]::SetEnvironmentVariable('SNOWFLAKE_PRIVATE_KEY',$env:PATH + ";C:/Users/Elait112.ELAIT-DT-CHE-W-/Permifrost/snowflake_tf_snow_key.p8")
+[System.Environment]::SetEnvironmentVariable('SNOWFLAKE_ACCOUNT','stb55081')
