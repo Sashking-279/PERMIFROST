@@ -1,1 +1,45 @@
+name: Terraform Snowflake CI
 
+on:
+  pull_request:
+    branches:
+      - main
+
+env:
+  SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
+  SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
+  SNOWFLAKE_AUTHENTICATOR: ${{ secrets.SNOWFLAKE_AUTHENTICATOR }}
+  SNOWFLAKE_PRIVATE_KEY: ${{ secrets.SNOWFLAKE_PRIVATE_KEY }}
+
+jobs:
+  RunChecks:
+    name: Run Checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Get Terraform version
+        run: echo "TERRAFORM_VERSION=$(cat .terraform-version)" >> "$GITHUB_ENV"
+        id: set-terraform-version
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ env.TERRAFORM_VERSION }}
+
+      - name: Terraform init
+        id: terraform-init
+        run: terraform init
+
+      - name: Terraform format
+        id: terraform-fmt
+        run: terraform fmt -check
+
+      - name: Terraform validate
+        id: terraform-validate
+        run: terraform validate
+
+      - name: Terraform plan
+        id: terraform-plan
+        run: terraform plan
