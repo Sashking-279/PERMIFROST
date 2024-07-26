@@ -15,7 +15,7 @@ jobs:
           script: |
             const { repo, owner } = context.repo;
             const result = await github.rest.pulls.create({
-              title: 'Automated PR from feature to main',
+              title: 'Automated PR from dev to main',
               owner,
               repo,
               head: '${{ github.ref_name }}',
