@@ -3,7 +3,7 @@ name: Terraform Snowflake CI
 on:
   push:
     branches:
-      - main
+      - dev
 
 env:
   SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
