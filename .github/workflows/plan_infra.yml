@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Get Terraform version
-        run: echo "TERRAFORM_VERSION=$(cat .terraform-version)" >> "$GITHUB_ENV"
+        run: echo "TERRAFORM_VERSION=${{ secrets.TERRAFORM_VERSION }}" >> "$GITHUB_ENV"
         id: set-terraform-version
 
       - name: Setup Terraform
