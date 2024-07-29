@@ -1,18 +1,3 @@
-resource "snowflake_database" "db" {
-  name = "TF_DEMO"
-}
-
-resource "snowflake_warehouse" "warehouse" {
-  name           = "TF_DEMO"
-  warehouse_size = "x-small"
-  auto_suspend   = 60
-}
-
-resource "snowflake_account_role" "role" {
-  provider = snowflake.security_admin
-  name     = "TF_DEMO_SVC_ROLE"
-}
-
 resource "snowflake_grant_privileges_to_account_role" "database_grant" {
   provider          = snowflake.security_admin
   privileges        = ["USAGE"]
@@ -76,6 +61,16 @@ resource "snowflake_grant_account_role" "grants" {
   provider  = snowflake.security_admin
   role_name =snowflake_account_role.role.name
   user_name = snowflake_user.user.name
+}
+
+
+resource "snowflake_role_grants" "reporter" {
+  role_name = snowflake_account_role.reporter.name
+  roles = [
+  ]
+  users = [
+    snowflake_user.reporting_user.name
+  ]
 }
 
 
