@@ -26,7 +26,7 @@ jobs:
               title: 'Automated PR from dev to main',
               owner,
               repo,
-              head: '${{ github.ref_name }}',
+              head: 'dev',
               base: 'main',
               body: [
                 'This PR is auto-generated whenver a code is pushed into Dev branch',
