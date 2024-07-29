@@ -4,4 +4,5 @@ snowflake_tf_snow_key.pub
 .terraform
 *.tfstate
 *.tfstate.*
+.terraform.lock.hcl
 
