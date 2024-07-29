@@ -1,8 +1,15 @@
 name: Pull Request Action
+# on:
+#   push:
+#     branches:
+#       - dev
+
+# Only trigger, when the build workflow succeeded
 on:
-  push:
-    branches:
-      - dev
+  workflow_run:
+    workflows: ["Terraform Snowflake CI"]
+    types:
+      - completed
       
 jobs:
   create-pull-request:
@@ -21,7 +28,7 @@ jobs:
               head: '${{ github.ref_name }}',
               base: 'main',
               body: [
-                'This PR is auto-generated whenver a code is pushed into feature',
+                'This PR is auto-generated whenver a code is pushed into Dev branch',
                 '[actions/github-script](https://github.com/actions/github-script).'
               ].join('\n')
             });
