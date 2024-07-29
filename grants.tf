@@ -64,15 +64,6 @@ resource "snowflake_grant_account_role" "grants" {
 }
 
 
-resource "snowflake_role_grants" "reporter" {
-  role_name = snowflake_account_role.reporter.name
-  roles = [
-  ]
-  users = [
-    snowflake_user.reporting_user.name
-  ]
-}
-
 
 
 
