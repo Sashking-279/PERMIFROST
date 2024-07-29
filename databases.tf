@@ -8,3 +8,9 @@ resource "snowflake_database" "reporting" {
   data_retention_time_in_days = 30
   name                        = "REPORTING"
 }
+
+resource "snowflake_database" "Customers" {
+  comment                     = "Customers database"
+  data_retention_time_in_days = 30
+  name                        = "Customers"
+}
