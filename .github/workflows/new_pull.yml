@@ -21,7 +21,7 @@ jobs:
               head: '${{ github.ref_name }}',
               base: 'main',
               body: [
-                'This PR is auto-generated whenver a code is pushed into feature',
+                'This PR is auto-generated whenver a code is pushed into Dev branch',
                 '[actions/github-script](https://github.com/actions/github-script).'
               ].join('\n')
             });
