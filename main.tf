@@ -8,7 +8,7 @@ resource "snowflake_warehouse" "warehouse" {
   auto_suspend   = 60
 }
 
-resource "snowflake_role" "role" {
+resource "snowflake_account_role" "role" {
   provider = snowflake.security_admin
   name     = "TF_DEMO_SVC_ROLE"
 }
@@ -26,7 +26,7 @@ resource "snowflake_grant_privileges_to_account_role" "database_grant" {
 resource "snowflake_schema" "schema" {
   database   = snowflake_database.db.name
   name       = "TF_DEMO"
-  is_managed = false
+  with_managed_access = false
 }
 
 resource "snowflake_grant_privileges_to_account_role" "schema_grant" {
