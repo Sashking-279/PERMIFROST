@@ -10,6 +10,7 @@ on:
     workflows: ["Terraform Snowflake CI"]
     types:
       - completed
+    branches : [dev]
       
 jobs:
   create-pull-request:
