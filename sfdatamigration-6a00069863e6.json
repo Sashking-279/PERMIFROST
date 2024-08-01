@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "sfdatamigration",
+  "private_key_id": "6a00069863e64da305c348b94a137f2f9a77d5ea",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDI8HistZGQf57F\nzN2uUWESrWPN5Rdu+NVxUMAjPW7SrzIrZGSfRN30tJaxtvImnrxvejtXfk/2QMSE\nhXPc9ikudmdBnjDYxxvMPlMdStArax86xFLYhHTT3x3dngEohxlDLI/JG5fUbjWn\nt47/Yj6fq122KI5bSEKsVw50dHA/ZmMwY0WE8h4I5cB+ots37Hf3bOiytrqS28Gm\nsFWj90XJcgPa+5mv6HzI8yTNhtdibR9COPuDjuuo/jlqb62mscwbbxYWgPyIKjru\nJb9OULHhzBC1Ni5s9IqkRNVP0RAPibRX0We2axgQczqv1CtoMr/Tw0mzBWMtfk26\nGJmHPiwLAgMBAAECggEACpdU36g+VkMeckc8aVi+vhuc3Bhhe3xAJoCJcBISilD+\nWvfSr0ETqzdC43ZvcwZWNlCsr2LoAg8jNzz1gMW0y/nPss9iEbsE8GdZ6CcDq+uH\nMjNw48VaMboGj/d+ZiLLe7/t4D1vwPGs1adA2/MotoUeI7YliBLZ+M1/OeIn8cod\nh2rkd3Z3VBqU8wOH8ZZWOO2Y8vIREO5ROO6H/1Jhx7grfnPqO8CV/LBE98o59rym\nzaDlD9sRrJlLX85hk5SpLDlNyXFfF5V58gV13CJB4bYmko5r0Bp+soiEk+Wm3RKz\naFJt3+8p6Kxdxfh4bU1jGhgEMWJxlao5iqOgDZrrmQKBgQDmaFK9lelCoGTwzuNk\nb6P6rO51LyhKMZB9ERCe6lafUGHmhnJgAIXuijrRo2XDfPCVz/hGm7eYjGwkQ2EU\nAj0zWnVnOINZAIXoxGP3zXCb0eK5W8XXlPzXBvitQ/4X3ead7UO9GAUSqW9oBBkf\nSjKxB07zclEAKpvf3wVb9Gu5XwKBgQDfQjc5ksXaQRusEdVtqHghpZzrYiG4EbJE\n6W+F33g0Ftiwd1ZcHxT1EHsvXXkQdyQI0gAUxdb22ES2x1NFh9Tb4ZKxwGJwGdfW\nYzYdpisohI7VAw1NGKrW/MjNCIWEjba3O5rE80BcOMZT/f/Kse/r23cbbeOfJ9rO\nIm44hFkQ1QKBgQCKq1DY32eS/NujfrCmmvZTAU9G4cna1XfDfcjGC/10RrmVN2eQ\n1d/FkBYUY8X0YLafQ5qGTGO0ARd4v8CmfS5+QLwWEpIit8jgLYqI8nEKpshQjKZG\nuFlvxLdX+GrtzFRmygyRuuoasDTnokfIaCyYFPD0XeHYOsyzcRNVo4ZN+wKBgB/Q\ndMQsiSs32fSkOfC9cBkDW6AjRMDRLMErLqw6EwwBMXG8H79S4o6lgZhXTpgtEiJ7\nom1TX/WfDfOp5dDjsU6AD4Jq8twcoqg3TQ/ejQniEeSC4dNZr4ahUQ/+peAkvaPQ\nx5ZHP6WkpYZ0jI3a22CVzpxHBYe5izGSsHg3S+XdAoGBAKLscEesolh9xHVb3/ao\ntLCz7nc+tj4w0Q0p3HGN2pyAPG4wUm7g8Y4acoCgXdp7WEpXqYMHZOmT8mdsNKL3\nLCZ4mJobQ4lDEtgmKpqXX/2m27g4/Bvq6WTa8QJUM/uED7M0tEThDeUbTfAnYYf8\n7pXTVy2onJimeua4fKVypPy9\n-----END PRIVATE KEY-----\n",
+  "client_email": "terraform-loader@sfdatamigration.iam.gserviceaccount.com",
+  "client_id": "104355312814937475089",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/terraform-loader%40sfdatamigration.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

@@ -5,4 +5,5 @@ snowflake_tf_snow_key.pub
 *.tfstate
 *.tfstate.*
 .terraform.lock.hcl
+.aws
 

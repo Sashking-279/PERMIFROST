@@ -33,10 +33,6 @@ resource "snowflake_grant_privileges_to_account_role" "warehouse_grant" {
   }
 }
 
-resource "tls_private_key" "svc_key" {
-  algorithm = "RSA"
-  rsa_bits  = 2048
-}
 
 resource "snowflake_user" "user" {
     provider          = snowflake.security_admin
@@ -44,7 +40,7 @@ resource "snowflake_user" "user" {
     default_warehouse = snowflake_warehouse.warehouse.name
     default_role      =snowflake_role.role.name
     default_namespace = "${snowflake_database.db.name}.${snowflake_schema.schema.name}"
-    rsa_public_key    = substr(tls_private_key.svc_key.public_key_pem, 27, 398)
+    password = "Abc@1234"
 }
 
 resource "snowflake_grant_privileges_to_account_role" "user_grant" {
