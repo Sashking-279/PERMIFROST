@@ -25,3 +25,26 @@ $export SNOWFLAKE_ACCOUNT="stb55081";
 [System.Environment]::SetEnvironmentVariable('SNOWFLAKE_AUTHENTICATOR','JWT')
 [System.Environment]::SetEnvironmentVariable('SNOWFLAKE_PRIVATE_KEY',$env:PATH + ";C:/Users/Elait112.ELAIT-DT-CHE-W-/Permifrost/snowflake_tf_snow_key.p8")
 [System.Environment]::SetEnvironmentVariable('SNOWFLAKE_ACCOUNT','stb55081')
+
+
+[System.Environment]::SetEnvironmentVariable('SNOWFLAKE_USER','tf-snow');
+[System.Environment]::SetEnvironmentVariable('SNOWFLAKE_AUTHENTICATOR','JWT');
+[System.Environment]::SetEnvironmentVariable('SNOWFLAKE_ACCOUNT','stb55081')
+
+private_key_path = "snowflake_tf_snow_key.p8"
+
+
+terraform {
+  backend "gcs" {
+    bucket  = "elait_bucket15"
+    prefix  = "terraform/state"
+    credentials = "sfdatamigration-e0a3c2ec18cb.json"
+  }
+}
+
+
+terraform {
+  backend "local" {
+    path = "terraform.tfstate"
+  }
+}
