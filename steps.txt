@@ -31,14 +31,14 @@ $export SNOWFLAKE_ACCOUNT="stb55081";
 [System.Environment]::SetEnvironmentVariable('SNOWFLAKE_AUTHENTICATOR','JWT');
 [System.Environment]::SetEnvironmentVariable('SNOWFLAKE_ACCOUNT','stb55081')
 
-
+private_key_path = "snowflake_tf_snow_key.p8"
 
 
 terraform {
   backend "gcs" {
     bucket  = "elait_bucket15"
     prefix  = "terraform/state"
-    credentials = "sfdatamigration-6a00069863e6.json"
+    credentials = "sfdatamigration-e0a3c2ec18cb.json"
   }
 }
 

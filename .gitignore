@@ -6,4 +6,4 @@ snowflake_tf_snow_key.pub
 *.tfstate.*
 .terraform.lock.hcl
 .aws
-*sfdatamigration-6a00069863e6.json*
+sfdatamigration-e0a3c2ec18cb.json

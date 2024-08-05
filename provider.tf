@@ -1,6 +1,7 @@
 provider "snowflake" {
   role = "SYSADMIN"
   private_key_path = "snowflake_tf_snow_key.p8"
+
 }
 
 provider "snowflake" {
@@ -10,11 +11,12 @@ provider "snowflake" {
 
 }
 
+
 terraform {
   backend "gcs" {
     bucket  = "elait_bucket15"
     prefix  = "terraform/state"
-    credentials = "sfdatamigration-6a00069863e6.json"
+    impersonate_service_account  = "terraform-loader@sfdatamigration.iam.gserviceaccount.com"
   }
 }
 
