@@ -26,10 +26,16 @@ $export SNOWFLAKE_ACCOUNT="stb55081";
 [System.Environment]::SetEnvironmentVariable('SNOWFLAKE_PRIVATE_KEY',$env:PATH + ";C:/Users/Elait112.ELAIT-DT-CHE-W-/Permifrost/snowflake_tf_snow_key.p8")
 [System.Environment]::SetEnvironmentVariable('SNOWFLAKE_ACCOUNT','stb55081')
 
-
+DEV
 [System.Environment]::SetEnvironmentVariable('SNOWFLAKE_USER','tf-snow');
 [System.Environment]::SetEnvironmentVariable('SNOWFLAKE_AUTHENTICATOR','JWT');
 [System.Environment]::SetEnvironmentVariable('SNOWFLAKE_ACCOUNT','stb55081')
+
+
+PROD
+[System.Environment]::SetEnvironmentVariable('SNOWFLAKE_USER','tf_snow');
+[System.Environment]::SetEnvironmentVariable('SNOWFLAKE_PASSWORD','Alpha123@');
+[System.Environment]::SetEnvironmentVariable('SNOWFLAKE_ACCOUNT','zfb23696')
 
 private_key_path = "snowflake_tf_snow_key.p8"
 
