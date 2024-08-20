@@ -7,3 +7,4 @@ snowflake_tf_snow_key.pub
 .terraform.lock.hcl
 .aws
 sfdatamigration-e0a3c2ec18cb.json
+version_prod.doc
