@@ -30,3 +30,4 @@ module "snowflake_resources" {
   source              = "../"
   time_travel_in_days = 30
 }
+
