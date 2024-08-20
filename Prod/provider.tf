@@ -11,7 +11,7 @@ provider "snowflake" {
 terraform {
   backend "gcs" {
     bucket  = "elait_bucket15"
-    prefix  = "terraform/state"
+    prefix  = "terraform/prod/state"
   }
 }
 
@@ -24,4 +24,9 @@ provider "snowflake" {
 provider "google" {
   project     = "sfdatamigration"
   region      = "us"
+}
+
+module "snowflake_resources" {
+  source              = "../"
+  time_travel_in_days = 30
 }
