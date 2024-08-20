@@ -40,4 +40,4 @@ jobs:
 
       - name: Terraform apply
         id: terraform-apply
-        run: terraform apply -chdir=Dev -auto-approve
+        run: terraform -chdir=Dev apply -auto-approve
