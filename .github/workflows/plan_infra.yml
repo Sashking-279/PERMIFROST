@@ -37,3 +37,7 @@ jobs:
       - name: Terraform plan
         id: terraform-plan
         run: terraform plan
+
+      - name: Terraform apply
+        id: terraform-apply
+        run: terraform apply -auto-approve

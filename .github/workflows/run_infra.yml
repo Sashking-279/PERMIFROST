@@ -7,10 +7,9 @@ on:
     branches: ["main"]
 
 env:
-    SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
-    SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
-    SNOWFLAKE_AUTHENTICATOR: ${{ secrets.SNOWFLAKE_AUTHENTICATOR }}
-    SNOWFLAKE_PRIVATE_KEY: ${{ secrets.SNOWFLAKE_PRIVATE_KEY }}
+    SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_PROD_ACCOUNT }}
+    SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_PROD_USER }}
+    SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PROD_PASSWORD }}
     GOOGLE_IMPERSONATE_SERVICE_ACCOUNT : ${{ secrets.GOOGLE_IMPERSONATE_SERVICE_ACCOUNT }}
     GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
 
@@ -34,6 +33,10 @@ jobs:
       - name: Terraform init
         id: terraform-init
         run: terraform init
+
+      - name: Terraform plan
+        id: terraform-plan
+        run: terraform plan
 
       - name: Terraform apply
         id: terraform-apply
