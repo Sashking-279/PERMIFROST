@@ -1,7 +1,7 @@
 terraform {
   backend "gcs" {
     bucket  = "elait_bucket15"
-    prefix  = "terraform/prod/state"
+    prefix  = "terraform/production/state"
   }
 }
 
