@@ -1,0 +1,32 @@
+terraform {
+  required_providers {
+    snowflake = {
+      source  = "Snowflake-Labs/snowflake"
+      version = "~> 0.87"
+    }
+  }
+}
+
+
+provider "snowflake" {
+  role = "SYSADMIN"
+  account  = "zfb23696" 
+  user = "TF_SNOW" 
+  password = "Alpha123@"
+}
+
+provider "snowflake" {
+  alias = "security_admin"
+  role  = "SECURITYADMIN"
+  account  = "zfb23696" 
+  user = "TF_SNOW" 
+  password = "Alpha123@"
+}
+
+provider "snowflake" {
+  alias = "account_admin"
+  role  = "ACCOUNTADMIN"
+  account  = "zfb23696" 
+  user = "TF_SNOW" 
+  password = "Alpha123@"
+}
